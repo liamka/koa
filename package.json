@@ -1,0 +1,36 @@
+{
+  "name": "mostik",
+  "version": "0.1.0",
+  "description": "MongoDB-style document database (insertOne, findOne, indexes) with a storage engine written in Rust",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./index.mjs",
+      "require": "./index.js"
+    }
+  },
+  "files": [
+    "index.js",
+    "index.mjs",
+    "index.d.ts",
+    "lib/",
+    "mostik.node"
+  ],
+  "napi": {
+    "binaryName": "mostik"
+  },
+  "scripts": {
+    "build": "napi build --release --manifest-path crates/node/Cargo.toml --output-dir . --dts native.d.ts",
+    "test": "node --expose-gc --test 'test/**/*.test.mjs'"
+  },
+  "dependencies": {
+    "msgpackr": "^1.11.0",
+    "ordered-binary": "^1.5.0"
+  },
+  "devDependencies": {
+    "@napi-rs/cli": "^3.0.0"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,14 @@
+{
+  "name": "mostik-bench",
+  "private": true,
+  "type": "module",
+  "description": "The same operations on mostik and on MongoDB, compared",
+  "scripts": {
+    "mostik": "node mostik.mjs",
+    "mongodb": "node mongodb.mjs",
+    "table": "node table.mjs"
+  },
+  "dependencies": {
+    "mongodb": "^6.10.0"
+  }
+}

@@ -1,0 +1,8 @@
+[workspace]
+resolver = "2"
+members = ["crates/engine", "crates/node"]
+exclude = ["mostik-v1"]
+
+[profile.release]
+lto = true
+codegen-units = 1
