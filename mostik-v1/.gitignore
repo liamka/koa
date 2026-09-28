@@ -1,0 +1,5 @@
+node_modules/
+target/
+*.node
+native.d.ts
+examples/**/*-db/
